@@ -107,4 +107,13 @@ class EventNotifiableTests: XCTestCase {
 
         self.waitForExpectations(timeout: 1.0)
     }
+    
+    static var allTests = [
+        ("testNotifyNotifiesRelatedSubscribers", testNotifyNotifiesRelatedSubscribers),
+        ("testNotifyNotifiesIgnoresUnrelatedSubscribers", testNotifyNotifiesIgnoresUnrelatedSubscribers),
+        ("testNotifyNotifiesIgnoresUnrelatedSubscribers_", testNotifyNotifiesIgnoresUnrelatedSubscribers_),
+        ("testNotifyOnUnknownEventEmitsError", testNotifyOnUnknownEventEmitsError),
+        ("testDropOnNotifiedEventEmitsError", testDropOnNotifiedEventEmitsError),
+        ("testNotifyEmitsLog", testNotifyEmitsLog)
+    ]
 }

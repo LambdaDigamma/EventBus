@@ -65,4 +65,11 @@ class EventChainableTests: XCTestCase {
 
         self.waitForExpectations(timeout: 1.0)
     }
+    
+    static var allTests = [
+        ("testAttachChain", testAttachChain),
+        ("testDetachChain", testDetachChain),
+        ("testDetachAllChains", testDetachAllChains),
+        ("testNotifyNotifiesChains", testNotifyNotifiesChains)
+    ]
 }

@@ -197,4 +197,20 @@ class EventSubscribableTests: XCTestCase {
 
         self.waitForExpectations(timeout: 1.0)
     }
+    
+    static var allTests = [
+        ("testAddingSubscriberWithoutRelatedSibling", testAddingSubscriberWithoutRelatedSibling),
+        ("testAddingSubscriberWithRelatedSibling", testAddingSubscriberWithRelatedSibling),
+        ("testAddingSubscriberWithUnrelatedSibling", testAddingSubscriberWithUnrelatedSibling),
+        ("testAddingSubscriberWithMultipleConformances", testAddingSubscriberWithMultipleConformances),
+        ("testRemovingSubscriberWithoutRelatedSibling", testRemovingSubscriberWithoutRelatedSibling),
+        ("testRemovingSubscriberWithRelatedSibling", testRemovingSubscriberWithRelatedSibling),
+        ("testRemovingSubscriberWithUnrelatedSibling", testRemovingSubscriberWithUnrelatedSibling),
+        ("testRemovingSubscriberWithMultipleConformancesIndividually", testRemovingSubscriberWithMultipleConformancesIndividually),
+        ("testRemovingSubscriberWithMultipleConformancesBroadly", testRemovingSubscriberWithMultipleConformancesBroadly),
+        ("testAddingNonClassSubscriberToEventEmitsError", testAddingNonClassSubscriberToEventEmitsError),
+        ("testRemovingNonClassSubscriberFromEventEmitsError", testRemovingNonClassSubscriberFromEventEmitsError),
+        ("testRemovingNonClassSubscriberEmitsError", testRemovingNonClassSubscriberEmitsError),
+        ("testSubscriptionOfUnknownEventEmitsError", testSubscriptionOfUnknownEventEmitsError)
+    ]
 }
