@@ -183,7 +183,7 @@ extension EventBus: EventSubscribable {
         }
         self.lock.with {
             self.updateSubscribers(for: eventType) { subscribed in
-                while let index = subscribed.index(where: { $0 == (subscriber as AnyObject) }) {
+                while let index = subscribed.firstIndex(where: { $0 == (subscriber as AnyObject) }) {
                     subscribed.remove(at: index)
                 }
             }
@@ -199,7 +199,7 @@ extension EventBus: EventSubscribable {
         self.lock.with {
             for (identifier, subscribed) in self.subscribed {
                 self.subscribed[identifier] = self.update(set: subscribed) { subscribed in
-                    while let index = subscribed.index(where: { $0 == (subscriber as AnyObject) }) {
+                    while let index = subscribed.firstIndex(where: { $0 == (subscriber as AnyObject) }) {
                         subscribed.remove(at: index)
                     }
                 }

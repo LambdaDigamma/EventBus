@@ -21,7 +21,8 @@ let package = Package(
         .target(
             name: "EventBus",
             dependencies: [],
-            path: "EventBus"),
+            path: "EventBus"
+        ),
         .testTarget(
             name: "EventBusTests",
             dependencies: ["EventBus"],
